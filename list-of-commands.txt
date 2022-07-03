@@ -1,0 +1,33 @@
+
+#created folder for local repo
+git init
+#created file
+git add ./first.txt
+git commit -m "initial commit"
+#created repo in github
+git remote add origin https://github.com/SashaMikhailau/python-mentoring.git
+git push -u origin master
+git checkout -b develop
+git push
+git checkout -b second
+#changes to text file
+git commit -a -m "changes in text"
+git push
+
+#create folder for new repo
+git clone https://github.com/SashaMikhailau/python-mentoring.git
+git checkout develop
+git checkout -b another
+#added another line to text
+git commit -a -m "another text changes"
+git push
+git checkout develop
+git merge origin/second
+git merge another
+#resolved conflicts in text file
+git commit -a -m "conflicts resolved"
+git push
+#added file with list of commands
+git add ./list-of-commands.txt
+git commit -m "added file with list of commands"
+git push
