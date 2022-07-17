@@ -1,4 +1,4 @@
-import mod_c
+from  mod_c import *
 
-
-mod_c.x = 1000
+global x
+x = 1000
